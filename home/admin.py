@@ -1,5 +1,5 @@
 from django.contrib import admin
-from home.models import member
+from home.models import Member, Post
 
 class MemberAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -9,7 +9,6 @@ class MemberAdmin(admin.ModelAdmin):
     ]
     list_display = ("first_name", "last_name", 'grade')
     search_fields = ['last_name']
-admin.site.register(member, MemberAdmin )
-
-
+admin.site.register(Member, MemberAdmin)
+admin.site.register(Post)
 
